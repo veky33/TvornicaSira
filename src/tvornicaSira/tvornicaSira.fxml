@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="647.0" prefWidth="745.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tvornicaSira.tvornicaSiraController">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TabPane fx:id="TVORNICA_SIRA_IZBOR" prefHeight="532.0" prefWidth="745.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Kupci">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #8BB4C8;">
+                     <children>
+                        <TableView fx:id="kupacTabela" layoutX="14.0" layoutY="357.0" prefHeight="310.0" prefWidth="729.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                           <columns>
+                              <TableColumn fx:id="kupacNazivKolona" prefWidth="124.0" text="Kupac_Naziv" />
+                              <TableColumn fx:id="kupacTipKolona" prefWidth="120.0" text="Tip" />
+                              <TableColumn fx:id="kupacOpisKolona" prefWidth="86.0" text="ID kupca" />
+                              <TableColumn fx:id="kupacAdresaKolona" prefWidth="155.0" text="Adresa" />
+                              <TableColumn fx:id="kupacTelefonKolona" prefWidth="108.0" text="Telefon" />
+                              <TableColumn fx:id="kupacEmailKolona" prefWidth="132.0" text="Email adresa" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="22.0" layoutY="38.0" text="Kupac" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="25.0" />
+                        <TextField fx:id="kupacNaziv" layoutX="112.0" layoutY="21.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="20.0" />
+                        <TextField fx:id="poljeNaziv111" layoutX="131.0" layoutY="52.0" AnchorPane.topAnchor="5050.0" />
+                        <TextField fx:id="kupacOpis" layoutX="131.0" layoutY="82.0" style="-fx-background-color: #EEDD47;" AnchorPane.topAnchor="80.0" />
+                        <TextField fx:id="kupacAdresa" layoutX="131.0" layoutY="112.0" style="-fx-background-color: #EEDD47;" AnchorPane.topAnchor="110.0" />
+                        <TextField fx:id="kupacTelefon" layoutX="131.0" layoutY="146.0" style="-fx-background-color: #EEDD47;" AnchorPane.topAnchor="140.0" />
+                        <TextField fx:id="kupacEmailadresa" layoutX="131.0" layoutY="172.0" style="-fx-background-color: #EEDD47;" AnchorPane.topAnchor="170.0" />
+                        <Label layoutX="16.0" layoutY="54.0" text="Tip" AnchorPane.leftAnchor="16.0" />
+                        <Label layoutX="16.0" layoutY="84.0" text="ID kupca" AnchorPane.leftAnchor="16.0" />
+                        <Label layoutX="16.0" layoutY="114.0" text="Adresa" AnchorPane.leftAnchor="16.0" />
+                        <Label layoutX="16.0" layoutY="144.0" text="Telefon" />
+                        <Label layoutX="16.0" layoutY="174.0" text="Email adresa" />
+                        <Button fx:id="DugmeDodajKupca" layoutX="344.0" layoutY="30.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #1572F0;" text="Dodaj kupca" AnchorPane.topAnchor="30.0" />
+                        <Button fx:id="DugmeBrisiKupca" layoutX="344.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #1572F0;" text="Briši kupca" />
+                        <TextField fx:id="kupacTip" layoutX="131.0" layoutY="50.0" style="-fx-background-color: #EEDD47;" />
+                        <Button fx:id="DugmeIzmjeniKupca" layoutX="344.0" layoutY="162.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #1572F0;" text="Izmjeni kupca" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Mlijeko">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="803.0" style="-fx-background-color: #8BB4C8;">
+                     <children>
+                        <TableView fx:id="mlijekoTabela" layoutX="15.0" layoutY="307.0" prefHeight="183.0" prefWidth="716.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0">
+                           <columns>
+                              <TableColumn fx:id="mlijekoVrstaKolona" minWidth="130.0" prefWidth="161.0" text="Vrsta" />
+                              <TableColumn fx:id="mlijekoCijenaKolona" minWidth="98.0" prefWidth="128.0" text="Cijena" />
+                              <TableColumn fx:id="mlijekoPremijaKolona" prefWidth="116.0" text="Premija" />
+                              <TableColumn fx:id="mlijekoKolicinaKolona" prefWidth="105.0" text="Kolicina" />
+                              <TableColumn fx:id="mlijekoKlasaKolona" minWidth="0.0" prefWidth="180.0" text="Klasa" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="14.0" layoutY="25.0" text="Vrsta mlijeka" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="25.0" />
+                        <Label layoutX="15.0" layoutY="71.0" prefHeight="17.0" prefWidth="40.0" text="Cijena" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="71.0" />
+                        <Label layoutX="15.0" layoutY="118.0" text="Iznos premije" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="118.0" />
+                        <Label layoutX="19.0" layoutY="174.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="174.0" />
+                        <Label layoutX="14.0" layoutY="222.0" prefHeight="17.0" prefWidth="88.0" text="Klasa" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="222.0" />
+                        <TextField fx:id="mlijekoVrsta" layoutX="131.0" layoutY="20.0" prefHeight="26.0" prefWidth="149.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="20.0" />
+                        <TextField fx:id="mlijekoJedCijena" layoutX="131.0" layoutY="63.0" prefHeight="32.0" prefWidth="149.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="63.0" />
+                        <TextField fx:id="mlijekoJedPremija" layoutX="131.0" layoutY="111.0" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="111.0" />
+                        <TextField fx:id="mlijekoKolicina" layoutX="131.0" layoutY="165.0" prefHeight="30.0" prefWidth="149.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="165.0" />
+                        <TextField fx:id="mlijekoKlasa" layoutX="131.0" layoutY="216.0" prefHeight="29.0" prefWidth="149.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="216.0" />
+                        <Button fx:id="dodajMlijeko" layoutX="302.0" layoutY="63.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: #1572F0;" text="Dodaj mlijeko" AnchorPane.leftAnchor="302.0" AnchorPane.topAnchor="63.0" />
+                        <Button fx:id="obrisiMlijeko" layoutX="275.0" layoutY="503.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #1572F0;" text="Obriši mlijeko" AnchorPane.rightAnchor="310.0" />
+                        <Label layoutX="14.0" layoutY="174.0" prefHeight="17.0" prefWidth="108.0" text="Kolicina" />
+                        <Label layoutX="22.0" layoutY="275.0" text="STANJE MLIJEKA:" />
+                        <Button fx:id="izmijeniMlijeko" layoutX="302.0" layoutY="170.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: #1572F0;" text="Izmijeni mlijeko" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Stanje sireva">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="509.0" prefWidth="803.0" style="-fx-background-color: #8BB4C8;">
+                     <children>
+                        <TableView fx:id="sirTabela" layoutX="16.0" layoutY="305.0" prefHeight="183.0" prefWidth="716.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="13.0">
+                           <columns>
+                              <TableColumn fx:id="skladisteNazivKolona" minWidth="130.0" prefWidth="161.0" text="Naziv" />
+                              <TableColumn fx:id="skladisteVrstaKolona" minWidth="98.0" prefWidth="98.0" text="Vrsta" />
+                              <TableColumn fx:id="skladisteCijenaKolona" prefWidth="109.0" text="Cijena (kilogram)" />
+                              <TableColumn fx:id="skladisteGodinaKolona" prefWidth="85.0" text="Godina" />
+                              <TableColumn fx:id="skladisteStanjeKolona" minWidth="0.0" prefWidth="112.0" text="U skladištu" />
+                              <TableColumn fx:id="skladisteIDKolona" minWidth="117.0" prefWidth="147.0" text="ID sira" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="11.0" layoutY="25.0" prefHeight="17.0" prefWidth="58.0" text="Naziv" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="25.0" />
+                        <Label layoutX="11.0" layoutY="54.0" prefHeight="17.0" prefWidth="32.0" text="Vrsta" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="54.0" />
+                        <Label layoutX="11.0" layoutY="183.0" prefHeight="17.0" prefWidth="100.0" text="ID sira" AnchorPane.leftAnchor="11.0" AnchorPane.topAnchor="183.0" />
+                        <Label layoutX="13.0" layoutY="89.0" text="Cijena po kg" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="89.0" />
+                        <Label layoutX="19.0" layoutY="174.0" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="174.0" />
+                        <Label layoutX="9.0" layoutY="153.0" prefHeight="17.0" prefWidth="80.0" text="Broj komada" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="153.0" />
+                        <TextField fx:id="poljeNaziv" layoutX="131.0" layoutY="20.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="20.0" />
+                        <TextField fx:id="poljeVrsta" layoutX="131.0" layoutY="52.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="50.0" />
+                        <TextField fx:id="poljeIDsira" layoutX="131.0" layoutY="179.0" style="-fx-background-color: #EEDD47;" AnchorPane.topAnchor="179.0" />
+                        <TextField fx:id="poljeCijena" layoutX="131.0" layoutY="85.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="85.0" />
+                        <TextField fx:id="poljeGodina" layoutX="131.0" layoutY="119.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="119.0" />
+                        <TextField fx:id="poljeStanje" layoutX="131.0" layoutY="149.0" style="-fx-background-color: #EEDD47;" AnchorPane.leftAnchor="131.0" AnchorPane.topAnchor="149.0" />
+                        <Button fx:id="dodajSirButton" layoutX="14.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: #1572F0;" text="Dodaj sir" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="214.0" />
+                        <Button fx:id="brisiSirButton" layoutX="275.0" layoutY="503.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #1572F0;" text="Obriši odabranu vrstu sira" AnchorPane.rightAnchor="310.0" />
+                        <Button fx:id="premjestiButton" layoutX="597.0" layoutY="86.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #1572F0;" text="Premjesti " AnchorPane.rightAnchor="54.0" />
+                        <ChoiceBox fx:id="prenesiSkladisteChoiceBox" layoutX="305.0" layoutY="21.0" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #1572F0;" AnchorPane.rightAnchor="190.0" />
+                        <Label layoutX="305.0" layoutY="90.0" prefHeight="17.0" prefWidth="100.0" text="Prenijeti komada" />
+                        <TextField fx:id="premjestiBrojKomada" layoutX="430.0" layoutY="86.0" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #EEDD47;" AnchorPane.rightAnchor="246.0" />
+                        <Label layoutX="8.0" layoutY="123.0" prefHeight="17.0" prefWidth="108.0" text="Godina proizvodnje" />
+                        <ChoiceBox fx:id="prenesenoUSkladisteChoiceBox" layoutX="305.0" layoutY="128.0" prefHeight="25.0" prefWidth="250.0" style="-fx-background-color: #1572F0;" />
+                        <Label layoutX="22.0" layoutY="275.0" text="STANJE SIREVA:" />
+                        <Button fx:id="izmijeniSir" layoutX="302.0" layoutY="214.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="266.0" style="-fx-background-color: #1572F0;" text="Izmijeni sir" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Nova narudžba">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #8BB4C8;">
+                     <children>
+                        <ChoiceBox fx:id="narudzbaKupacOdabir" layoutX="90.0" layoutY="14.0" prefHeight="25.0" prefWidth="280.0" style="-fx-background-color: #1572F0;" AnchorPane.topAnchor="20.0" />
+                        <Label layoutX="14.0" layoutY="24.0" text="Kupac" AnchorPane.leftAnchor="14.0" />
+                        <Label layoutX="476.0" layoutY="519.0" text="UKUPNO:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="narudzbaSkladisteOdabir" layoutX="90.0" layoutY="51.0" prefHeight="25.0" prefWidth="280.0" style="-fx-background-color: #1572F0;" AnchorPane.topAnchor="50.0" />
+                        <Label layoutX="14.0" layoutY="54.0" text="Skladište" />
+                        <Button fx:id="novaNarudzbaButton" layoutX="607.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: #1572F0;" text="Nova narudžba" AnchorPane.rightAnchor="41.0" />
+                        <Button fx:id="OtkaziNarudzbu" layoutX="609.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #1572F0;" text="Otkaži" AnchorPane.rightAnchor="40.0" />
+                        <TableView fx:id="sirTabelaNarudzba" layoutX="7.0" layoutY="104.0" prefHeight="172.0" prefWidth="728.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="9.0">
+                           <columns>
+                              <TableColumn fx:id="skladisteNazivKolonaNarudzba" minWidth="130.0" prefWidth="161.0" text="Naziv" />
+                              <TableColumn fx:id="skladisteVrstaKolonaNarudzba" minWidth="98.0" prefWidth="98.0" text="Vrsta" />
+                              <TableColumn fx:id="skladisteVelicinaKolonaNarudzba" minWidth="117.0" prefWidth="147.0" text="Pakovanje (kilogram)" />
+                              <TableColumn fx:id="skladisteCijenaKolonaNarudzba" prefWidth="109.0" text="Cijena (kilogram)" />
+                              <TableColumn fx:id="skladisteGodinaKolonaNarudzba" prefWidth="85.0" text="Godina" />
+                              <TableColumn fx:id="skladisteStanjeKolonaNarudzba" minWidth="0.0" prefWidth="112.0" text="U skladištu" />
+                           </columns>
+                        </TableView>
+                        <Separator layoutX="27.0" layoutY="90.0" prefHeight="0.0" prefWidth="446.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" />
+                        <Button fx:id="dodajStavkuButton" layoutX="587.0" layoutY="283.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" style="-fx-background-color: #1572F0;" text="Dodaj stavku" AnchorPane.rightAnchor="19.0" />
+                        <TableView fx:id="stavkeNarudzbeTabela" layoutX="7.0" layoutY="320.0" prefHeight="170.0" prefWidth="715.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="22.0">
+                           <columns>
+                              <TableColumn fx:id="racunSirNaziv" minWidth="130.0" prefWidth="161.0" text="Naziv" />
+                              <TableColumn fx:id="racunSirVrsta" minWidth="98.0" prefWidth="98.0" text="Vrsta" />
+                              <TableColumn fx:id="racunSirVelicina" minWidth="117.0" prefWidth="147.0" text="Pakovanje (kilogram)" />
+                              <TableColumn fx:id="racunSirCijena" prefWidth="109.0" text="Cijena (kilogram)" />
+                              <TableColumn fx:id="racunSirGodina" prefWidth="85.0" text="Godina" />
+                              <TableColumn fx:id="racunSirKolicina" minWidth="0.0" prefWidth="112.0" text="Količina" />
+                           </columns>
+                        </TableView>
+                        <TextField fx:id="kolicinaSira" layoutX="476.0" layoutY="283.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #EEDD47;" />
+                        <Label layoutX="398.0" layoutY="287.0" prefHeight="17.0" prefWidth="59.0" text="Količina:" />
+                        <Button fx:id="PotvrdiNarudzbu" layoutX="645.0" layoutY="516.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="86.0" style="-fx-background-color: #1572F0;" text="Potvrdi" AnchorPane.rightAnchor="14.0" />
+                        <TextField fx:id="ukupnoCijena" editable="false" layoutX="549.0" layoutY="516.0" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: #EEDD47;" />
+                        <CheckBox fx:id="prikaziSveSireveCheckBox" layoutX="379.0" layoutY="54.0" mnemonicParsing="false" text="Prikaži sireve kojih nema na stanju" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Narudžba">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #8BB4C8;">
+                     <children>
+                        <DatePicker fx:id="datumNarudzba" layoutX="270.0" layoutY="20.0" style="-fx-background-color: #8F153F;" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="20.0" />
+                        <TableView fx:id="narudzbaTabela" layoutX="8.0" layoutY="92.0" prefHeight="135.0" prefWidth="729.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                           <columns>
+                              <TableColumn fx:id="narudzbaKupacKolona" prefWidth="155.0" text="Naziv" />
+                              <TableColumn fx:id="narudzbaTipKolona" prefWidth="164.0" text="Vrsta" />
+                              <TableColumn fx:id="narudzbaSkladisteKolona" prefWidth="166.0" text="Skladište" />
+                              <TableColumn fx:id="narudzbaDatumKolona" prefWidth="78.0" text="Datum" />
+                              <TableColumn fx:id="narudzbaIsporucenaKolona" prefWidth="83.0" text="Isporučena" />
+                              <TableColumn fx:id="narudzbaCijenaKolona" prefWidth="67.0" text="Cijena" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="prikaziPoKupcu" layoutX="633.0" layoutY="55.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #1572F0;" text="Prikaži po kupcu" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="50.0" />
+                        <Button fx:id="prikaziPoDatumu" layoutX="587.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #1572F0;" text="Prikaži po datumu" AnchorPane.rightAnchor="8.0" />
+                        <ChoiceBox fx:id="narudzbeKupac" layoutX="134.0" layoutY="50.0" prefHeight="25.0" prefWidth="310.0" style="-fx-background-color: #1572F0;" />
+                        <CheckBox fx:id="checkIsporucene" layoutX="465.0" layoutY="54.0" mnemonicParsing="false" text="isporučene" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="54.0" />
+                        <CheckBox id="checkNeisporucene" fx:id="checkNeisporucene" layoutX="465.0" layoutY="24.0" mnemonicParsing="false" text="neisporučene" AnchorPane.leftAnchor="465.0" AnchorPane.topAnchor="24.0" />
+                        <Button fx:id="izvrsiDostavu" layoutX="587.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #1572F0;" text="Izvrši dostavu odabrane" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="235.0" />
+                        <ChoiceBox fx:id="narudzbeDostavljac" layoutX="134.0" layoutY="235.0" prefHeight="25.0" prefWidth="310.0" style="-fx-background-color: #1572F0;" AnchorPane.leftAnchor="134.0" AnchorPane.topAnchor="235.0" />
+                        <Label layoutX="16.0" layoutY="239.0" text="Dostupni dostavljači" AnchorPane.leftAnchor="16.0" />
+                        <Label layoutX="8.0" layoutY="54.0" text="Odabir kupca" AnchorPane.leftAnchor="16.0" />
+                        <Label layoutX="16.0" layoutY="24.0" text="Odabir datuma" />
+                        <Separator layoutX="8.0" layoutY="75.0" prefHeight="17.0" prefWidth="686.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" />
+                        <TableView fx:id="stavkeNarudzbePregledTabela" layoutX="8.0" layoutY="269.0" prefHeight="186.0" prefWidth="729.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                           <columns>
+                              <TableColumn fx:id="stavkeNazivKolona" minWidth="103.0" prefWidth="104.0" text="Naziv" />
+                              <TableColumn fx:id="stavkeVrstaKolona" minWidth="98.0" prefWidth="109.0" text="Vrsta" />
+                              <TableColumn fx:id="stavkeVelicinaKolona" minWidth="117.0" prefWidth="135.0" text="Pakovanje (kilogram)" />
+                              <TableColumn fx:id="stavkeCijenaKolona" prefWidth="155.0" text="Cijena (kilogram)" />
+                              <TableColumn fx:id="stavkeGodinaKolona" prefWidth="60.0" text="Godina" />
+                              <TableColumn fx:id="stavkeKolicinaKolona" minWidth="0.0" prefWidth="75.0" text="Količina" />
+                              <TableColumn fx:id="stavkeUkupnoKolona" prefWidth="75.0" text="Cijena" />
+                           </columns>
+                        </TableView>
+                        <TextArea fx:id="izvjestajTextArea" editable="false" layoutX="9.0" layoutY="467.0" prefHeight="61.0" prefWidth="360.0" style="-fx-background-color: #EEDD47;" wrapText="true" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="134.0" AnchorPane.rightAnchor="8.0" />
+                        <Label layoutX="16.0" layoutY="508.0" text="Izvještaj o dostavi" AnchorPane.bottomAnchor="50.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="imenikTab" text="Imenik">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="imenikOsvjeziButton" layoutX="636.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #1572F0;" text="Osvježi" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0" />
+                        <TableView fx:id="imenikTabela" layoutX="43.0" layoutY="20.0" prefHeight="200.0" prefWidth="611.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="imenikImeKolona" minWidth="125.0" prefWidth="140.0" text="Ime" />
+                              <TableColumn fx:id="imenikFirmaKolona" minWidth="91.0" prefWidth="129.0" text="Firma" />
+                              <TableColumn fx:id="imenikTipKolona" minWidth="106.0" prefWidth="106.0" text="Tip" />
+                              <TableColumn fx:id="imenikTelefonKolona" minWidth="125.0" prefWidth="75.0" text="Telefon" />
+                              <TableColumn fx:id="imenikEmailadresaKolona" minWidth="175.0" prefWidth="217.0" text="Email adresa" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
